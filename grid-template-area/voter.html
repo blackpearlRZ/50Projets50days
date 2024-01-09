@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voter</title>
+    <link rel="stylesheet" href="voter.css">
+</head>
+<body>
+    <h2>Questionnaire de vote</h2>
+    <ol>
+        <li>Le meilleur Antivirus pour vous est :</li>
+        <select name="choose" id="list">
+            <option value="value1">Avira free security</option>
+            <option value="value2">VPN Gate Client plug-in</option>
+            <option value="value3">SupêrAntiSpyware</option>
+        </select>
+        <li>Votre degre de satisfaction est : </li>
+        <label for="range">0%</label>
+        <input type="range" id="range" class="range">
+        <label for="range">100%</label>
+        <li>Avez-vous deja utilise au autre antivirus ?</li>
+        <input type="radio" id="OUi" name="YN" value="OUI">
+        <label for="OUI">Oui</label>
+        <input type="radio" id="NON" name="YN" value="NON">
+        <label for="NON">Non</label>
+    </ol>
+    <button>Envoyer</button>
+    <button>Annuler</button>
+</body>
+</html>

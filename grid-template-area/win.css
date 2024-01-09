@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+
+:root {
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi: 600;
+    --fw-bold: 700;
+    --fw-extra: 800;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+button,
+input {
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+header{
+    padding-top: 1rem;
+    margin-bottom: 4rem o !important;
+}
+h1{
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+}
+.menu-link{
+    padding-bottom: 1rem;
+    border-bottom: 3px solid transparent;
+    display: block;
+}
+.menu-link:hover{
+    border-bottom: 3px solid green;
+    color: green;
+}
+.container{
+    --width: 1024px;
+    --padding: 1rem;
+
+    width: min(
+        var(--width),
+        calc(100% - var(--padding) * 2)
+    );
+    margin: 0 auto;
+}
+main{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: auto 2.5rem auto 2.5rem auto;
+    grid-template-rows: auto 2rem auto;
+    grid-template-areas: 
+    "logiciel1 . logiciel2 . logiciel3"
+    "   .      .     .     .      .   "
+    " all      all    all   vote  vote";
+}
+#logiciel1{
+    grid-area: logiciel1;
+}
+#logiciel2{
+    grid-area: logiciel2;
+}
+#logiciel3{
+    grid-area: logiciel3;
+}
+.all{
+    grid-area: all;
+}
+.voter{
+    grid-area: vote;
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: var(--fw-extra);
+}
+span{
+    display: block;
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+    letter-spacing: 3px;
+}
+.logo-title{
+    display: grid;
+    grid-template-columns: 2.4rem auto;
+    padding-bottom: 1rem;
+}
+p{
+    font-weight: var(--fw-semi);
+}
+button{
+    background-color: transparent;
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.4rem;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width :1037px) {
+    main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 3rem auto 3rem auto 3rem auto 1rem auto;
+        grid-template-areas: 
+        "logiciel1"
+        "     .   "
+        "logiciel2"
+        "     .   "
+        "logiciel3"
+        "     .   "
+        "all"
+        "     .   "
+        "vote";
+    }
+    .menu{
+        gap: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    li >a{
+        font-size: 1rem;
+    }
+}
